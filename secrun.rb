@@ -5,21 +5,21 @@
 class Secrun < Formula
   desc "Secure environment variable runner — keep secrets out of project directories"
   homepage "https://github.com/MartSurv/secrun"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MartSurv/secrun/releases/download/v1.0.1/secrun_1.0.1_darwin_amd64.tar.gz"
-      sha256 "8311eb25376265a3ff1b540d6533f956765bc086ee7bf99341db91f670bdb2ed"
+      url "https://github.com/MartSurv/secrun/releases/download/v1.0.2/secrun_1.0.2_darwin_amd64.tar.gz"
+      sha256 "6555809ea4dc6cc7ab1c6eaffcd1936f34c2d8ab5f2d01b8daac16904c64f70f"
 
       define_method(:install) do
         bin.install "secrun"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MartSurv/secrun/releases/download/v1.0.1/secrun_1.0.1_darwin_arm64.tar.gz"
-      sha256 "5911a8e25b29794e494adb478929e6cad029c761594b6b682055f7e2630e5c08"
+      url "https://github.com/MartSurv/secrun/releases/download/v1.0.2/secrun_1.0.2_darwin_arm64.tar.gz"
+      sha256 "cdb5eb71b5de131bb7de734074d451490908d82d6bf391759ac2d9c91bc66de3"
 
       define_method(:install) do
         bin.install "secrun"
@@ -29,15 +29,15 @@ class Secrun < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MartSurv/secrun/releases/download/v1.0.1/secrun_1.0.1_linux_amd64.tar.gz"
-      sha256 "fb6c41f878fc8aca39d16ee9f07445bf58ee0548955bd98f009dc8e0a143dcbc"
+      url "https://github.com/MartSurv/secrun/releases/download/v1.0.2/secrun_1.0.2_linux_amd64.tar.gz"
+      sha256 "9c9cde45f644736c78effbb9bfbf6befdbdb29b5fa2804b30906973c3219890f"
       define_method(:install) do
         bin.install "secrun"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MartSurv/secrun/releases/download/v1.0.1/secrun_1.0.1_linux_arm64.tar.gz"
-      sha256 "7a6668dfb05783f0914aef6a297ad39f5015c1d9833e223fd06494658f8c2eeb"
+      url "https://github.com/MartSurv/secrun/releases/download/v1.0.2/secrun_1.0.2_linux_arm64.tar.gz"
+      sha256 "6982d6c89a99a2385f391deac915037e6bcc3bc2c5803c6765987b293c470309"
       define_method(:install) do
         bin.install "secrun"
       end
